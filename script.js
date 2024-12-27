@@ -9,20 +9,20 @@ let high=0;
 let h3=document.querySelector("#max");
 let btnSound=new Audio("sound-1-167181.mp3");
 let gameOver=new Audio("game-over-arcade-6435.mp3");
-document.addEventListener("keypress",function()
-{
+let startBtn=document.querySelector("#start");
+startBtn.addEventListener("click",function(){
     if(started==false)
-    {
-        started=true;
-        levelUp();
-        if (h1 && !document.body.contains(h1)) {
-            document.body.appendChild(h1); // Re-add the h1 element if it was removed
+        {
+            started=true;
+            levelUp();
+            if (h1 && !document.body.contains(h1)) {
+                document.body.appendChild(h1); // Re-add the h1 element if it was removed
+            }
+            if (h1) {
+                h1.remove(); // Remove Game Over message if present
+            }
         }
-        if (h1) {
-            h1.remove(); // Remove Game Over message if present
-        }
-    }
-});
+})
 function gameFlash(btn)
 {
     btn.classList.add("flash");
@@ -39,6 +39,7 @@ function userFlash(btn)
 }
 function levelUp()
 {
+    startBtn.style.display="none";
     userSeq=[];
     level++;
     h2.innerText=`Level ${level}`;
@@ -68,7 +69,7 @@ function checkAns(idx)
             document.querySelector("body").style.backgroundColor="white";
         },650);
         high=Math.max(high,level-1);
-        h3.innerText=`Your maximum score : ${high}`;
+        h3.innerText=`Your score : ${level-1}. Your maximum score : ${high}`;
         reset();
         gameOver.play();
     }
@@ -89,6 +90,7 @@ for(btn of allBtns)
 }
 function reset()
 {
+    startBtn.style.display="block";
     started=false;
     gameSeq=[];
     userSeq=[];

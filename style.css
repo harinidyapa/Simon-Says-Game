@@ -27,10 +27,21 @@ body{
 .b-purple{
     border-bottom-right-radius: 100%;
 }
-.btn-container{
-    
+#start-container {
+    height: 30px; /* Same height as the start button */
+    width: 100px; /* Same width as the start button */
+    margin-top: 10px;
+    margin: auto;
+}
+#start {
+    height: 100%;
+    width: 100%;
+    background-color: yellowgreen;
+}
+.btn-container{   
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 .red{
     background-color: red;
