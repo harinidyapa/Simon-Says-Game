@@ -92,14 +92,14 @@ body{
 
 @media (max-width: 600px) {
     .btn {
-        width: 180px;
-        height: 180px;
+        width: 200px;
+        height: 200px;
         margin: 2px;
     }
 
     .simon-circle {
-        width: 120px;
-        height: 120px;
+        width: 130px;
+        height: 130px;
     }
 
     .simon-text {
