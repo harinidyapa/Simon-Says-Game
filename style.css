@@ -38,10 +38,13 @@ body{
     width: 100%;
     background-color: yellowgreen;
 }
-.btn-container{   
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+.btn-container {
+    position: relative;
+    width: fit-content;
+    margin: 40px auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 0;
 }
 .red{
     background-color: red;
@@ -69,13 +72,13 @@ body{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background-color: #333333; /* Light background */
+    background-color: #333333;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 3px solid black;
+    z-index: 1;
 }
-
 .simon-text {
     font-family: "Press Start 2P", serif;
     font-size: 25px;
@@ -85,4 +88,38 @@ body{
 }
 #gameover{
     font-family: "Press Start 2P", serif;
+}
+
+@media (max-width: 600px) {
+    .btn {
+        width: 100px;
+        height: 100px;
+        margin: 2px;
+    }
+
+    .simon-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .simon-text {
+        font-size: 8px;
+    }
+
+    h1, h2 {
+        font-size: 12px;
+    }
+
+    #start-container {
+        width: 100px;
+        height: 35px;
+    }
+
+    #start {
+        font-size: 10px;
+    }
+
+    #max {
+        font-size: 12px;
+    }
 }

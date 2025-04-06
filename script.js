@@ -7,7 +7,8 @@ let h1=document.querySelector("#gameover");
 let level=0;
 let high=0;
 let h3=document.querySelector("#max");
-let btnSound=new Audio("sound-1-167181.mp3");
+let btnSound = new Audio("click-short-mouse-click-gamemaster-audio-1-00-00.mp3");
+
 let gameOver=new Audio("game-over-arcade-6435.mp3");
 let startBtn=document.querySelector("#start");
 startBtn.addEventListener("click",function(){
